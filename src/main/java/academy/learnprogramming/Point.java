@@ -30,7 +30,7 @@ public class Point {
     }
 
     public double distance(){
-        return(distance(0.0,0.0));
+        return(distance(0,0));
     }
 
     public double distance(int x,int y){
