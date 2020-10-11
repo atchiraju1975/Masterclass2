@@ -1,7 +1,5 @@
 package academy.learnprogramming.oopschallenge;
 
-import academy.learnprogramming.composition.SingleRoom;
-
 import java.util.Scanner;
 
 public class RegularBurger {
@@ -13,13 +11,16 @@ public class RegularBurger {
         System.out.println("May I take your order : ");
         boolean isOrderYetToReceive=true;
         while(isOrderYetToReceive){
+            int readIntEntered=0;
             System.out.println("Enter Your Burger Choice 1.Regular Burger 2.Healthy Burger 3.Delux Burger : ");
             boolean isAnInt = scanner.hasNextInt();
-            int readIntEntered=0;
              if(isAnInt){
             readIntEntered = scanner.nextInt();
             isOrderYetToReceive=false;
              }
+             else{
+                 char c = scanner.next().charAt(0);
+                 continue;}
 
              switch(readIntEntered){
                  case 2:
@@ -40,6 +41,7 @@ public class RegularBurger {
              }
 
         }
+        //System.in.close();
         System.out.println("Thankyou for your order, move to receiving area and wait for the order number");
     }
 
